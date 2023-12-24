@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rate-it-app.herokuapp.com', '8000-wouterit-rateitgoodnews-w9bc95e6p6n.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['rate-it-app-42eb5e036430.herokuapp.com', '8000-wouterit-rateitgoodnews-w9bc95e6p6n.ws-eu107.gitpod.io']
 
 
 # Application definition
