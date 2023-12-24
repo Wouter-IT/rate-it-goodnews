@@ -6,7 +6,7 @@ STATUS = ((0, "Draft"), (1, "Pusblished"))
 
 class Post(models.Model):
     
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="news_post")
     edited_on = models.DateTimeField(auto_now=True)
