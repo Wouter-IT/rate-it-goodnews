@@ -48,6 +48,12 @@ class Comment(models.Model):
     
     def __str__(self):
         return f'Comment {self.body} by {self.user}'
+    
+    def number_of_likes(self):
+        return self.likes.count()
+    
+    def number_of_reports(self):
+        return self.reports.count()
 
 
 
