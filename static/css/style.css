@@ -9,8 +9,13 @@ body {
     font-weight: 600;
 }
 
-#logo-text {
-    padding-left: 10px;
+.navbar {
+    border: 2px solid #1f201e;
+}
+
+.nav-item {
+    font-size: large;
+    font-weight: 600;
 }
 
 .navbar-toggler {
