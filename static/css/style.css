@@ -26,3 +26,12 @@ body {
 .gold-heading {
     color: #D6AA39;
 }
+
+.socials {
+    list-style-type: none;
+}
+
+.socials i {
+    font-size: 170%;
+    color: #f3fcf0;
+}
