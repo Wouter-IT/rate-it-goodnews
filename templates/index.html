@@ -3,12 +3,29 @@
 {% block content %}
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mx-5">
 
-        <!-- Post Entries Column -->
+        <!-- Post Entries Column and layout taken from the django walkthrough project and altered to suit the rate-it needs.-->
         <div class="col-12 mt-3 left">
             <div class="row">
-
+                {% for post in post_list %}
+                <div class="col-md-4">
+                    <div class="card m-2 md-4">
+                        <div class="card-body">
+                            <a href="#">
+                                <h3 class="card-title"><strong>{{ post.title }}</strong></h3>
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <h5 class="gold-heading">{{ post.user }} | {{ post.created_on }}</h5>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

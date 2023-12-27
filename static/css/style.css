@@ -10,7 +10,8 @@ body {
 }
 
 .navbar {
-    border: 2px solid #1f201e;
+    border-bottom: 2px solid #1f201e;
+    background-color: #171916;
 }
 
 .nav-item {
@@ -25,6 +26,16 @@ body {
 
 .gold-heading {
     color: #D6AA39;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: #f3fcf0;
+}
+
+.footer {
+    background-color: #171916;
+    border-top: 2px solid #1f201e;
 }
 
 .socials {
