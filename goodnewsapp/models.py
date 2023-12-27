@@ -25,7 +25,7 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title} by {self.user}'
     
-    def number_of_likes_post(self):
+    def number_of_post_likes(self):
         return self.likes.count()
     
     def number_of_reports_post(self):

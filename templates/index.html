@@ -10,14 +10,16 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
-                    <div class="card m-2 md-4">
+                    <div class="card m-auto mb-3 md-4">
                         <div class="card-body">
                             <a href="#">
                                 <h3 class="card-title"><strong>{{ post.title }}</strong></h3>
+                                <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on }}</h5>
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                                <h5 class="gold-heading">{{ post.user }} | {{ post.created_on }}</h5>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <p class="card-text pt-2">{{ post.excerpt }}</p>
                             </a>
+                            <hr>
+                            <i class="far fa-heart"></i> {{ post.number_of_post_likes }}
                         </div>
                     </div>
                 </div>
@@ -27,6 +29,7 @@
                 {% endif %}
                 {% endfor %}
             </div>
+            <div id="buffer"></div>
         </div>
     </div>
 
