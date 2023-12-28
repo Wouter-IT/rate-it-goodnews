@@ -38,6 +38,12 @@ body {
     color: #f3fcf0;
 }
 
+#greeting-card {
+    background-color: #f3fcf0;
+    color: #171916;
+    border-color: #FFFFFF;
+}
+
 #buffer {
     margin-bottom: 10%;
 }
