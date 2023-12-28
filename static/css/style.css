@@ -28,13 +28,18 @@ body {
     color: #D6AA39;
 }
 
+#info-card {
+    width: 10vw;
+    margin-right: 5vw !important;
+}
+
 .card-body a {
     text-decoration: none;
     color: #f3fcf0;
 }
 
 #buffer {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .footer {
