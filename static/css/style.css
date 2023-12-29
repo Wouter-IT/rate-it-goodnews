@@ -49,6 +49,20 @@ body {
     border-color: #FFFFFF;
 }
 
+.page-link {
+    color: #D6AA39;
+}
+
+.page-link:hover {
+    background-color: #D6AA39;
+    color: #171916;
+}
+
+.page-link:focus {
+    color: #D6AA39;
+    box-shadow: none;
+}
+
 #buffer {
     margin-bottom: 10%;
 }
