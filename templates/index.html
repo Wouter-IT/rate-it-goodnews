@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container mt-3">
-    <div class="card" id="greeting-card">
-        <div class="card-body">
-            <h5 class="card-title"> Greetings!</h5>
-            <p class="card-text">Welcome to Rate-It Goodnews. <strong>THE</strong> place to find out what good things are going on in the world!</p>
+<div class="container">
+    <div class="float-xl-end w-auto" id="element-ui"> 
+        <div>
+            <button class="btn btn-lg btn-create-post mb-2 w-100"><strong>Create post</strong></button>
+        </div>
+        <div class="card shadow-lg" id="greeting-card">
+            <div class="card-body">
+                <h5 class="card-title"> Greetings!</h5>
+                <p class="card-text">Welcome to Rate-It Goodnews. <strong>THE</strong> place to find out what good things are going on in the world!</p>
+            </div>
         </div>
     </div>
 </div>
@@ -16,7 +21,7 @@
         <!-- Create a card for every post ins the post_list. Then populates the card with thepost data.-->
         {% for post in post_list %}
         <div class="col-md-6">
-            <div class="card m-auto mb-3 md-4">
+            <div class="card shadow m-auto mb-3 md-4">
                 <div class="card-body">
                     <a href="#">
                         <h3 class="card-title"><strong>{{ post.title }}</strong></h3>

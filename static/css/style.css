@@ -24,17 +24,22 @@ body {
     border-color: #D6AA39;
 }
 
+#element-ui {
+    max-width: 25%;
+    margin-left: 0.5vw;
+}
+
 .gold-heading {
     color: #D6AA39;
 }
 
-#info-card {
-    width: 10vw;
-    margin-right: 5vw !important;
-}
-
 .card-body a {
     text-decoration: none;
+    color: #f3fcf0;
+}
+
+.btn-create-post {
+    background-color: #D6AA39;
     color: #f3fcf0;
 }
 
@@ -60,4 +65,13 @@ body {
 .socials i {
     font-size: 170%;
     color: #f3fcf0;
+}
+
+@media screen and (max-width: 1200px) {
+    #element-ui {
+        max-width: none;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
