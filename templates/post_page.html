@@ -19,7 +19,7 @@
 <div class="container mt-2">
     <div>
         <h1>{{ post.title }}</h1>
-        <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on }}</h6>
+        <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on|timesince }}</h6>
     </div>
     <div>
         {% if "placeholder" in post.featured_image.url %}
@@ -51,7 +51,7 @@
                     <p>
                         {{ comment.user }}
                         <span class="text-muted">
-                            {{ comment.created_on }}
+                            {{ comment.created_on|timesince }}
                         </span> wrote:
                         <div class="d-inline-block float-end">
                             <i class="far fa-heart"></i> {{ comment.number_of_likes_comment }}
