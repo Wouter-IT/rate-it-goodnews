@@ -35,10 +35,10 @@
 
 <!-- Repurposed from the walkthrough project "Codestar" -->
 <div class="container">
-    <i class="far fa-heart"></i> {{ post.number_of_post_likes }}
+    <i class="fa-regular fa-circle-up icon comment-icon"></i> {{ post.number_of_post_likes }}
     <span class="px-2">|</span>  
     {% with comments.count as total_comments %}
-    <i class="fa-regular fa-comment"></i> {{ comments.count }}
+    <i class="fa-regular fa-comment icon up-icon"></i> {{ comments.count }}
     {% endwith %}
     <hr>
     <div class="row mx-1">
@@ -54,7 +54,7 @@
                             {{ comment.created_on|timesince }}
                         </span> wrote:
                         <div class="d-inline-block float-end">
-                            <i class="far fa-heart"></i> {{ comment.number_of_likes_comment }}
+                            <i class="fa-regular fa-circle-up icon up-icon"></i> {{ comment.number_of_likes_comment }}
                         </div>
                     </p>
                     {{ comment.body | linebreaks }}
