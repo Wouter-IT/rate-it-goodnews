@@ -8,21 +8,26 @@
         </div>
         <div class="card shadow-lg" id="greeting-card">
             <div class="card-body">
-                <h5 class="card-title"> Greetings!</h5>
+                <h5 class="card-title">Greetings!</h5>
                 <p class="card-text">Welcome to Rate-It Goodnews. <strong>THE</strong> place to find out what good things are going on in the world!</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <h3>{{ post.title }}</h3>
-    <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on }}</h6>
-    <img src=" {{ post.featured_image.url }}">
-    <p>{{ post.content }}</p>
+<div class="container mt-2">
+    <div>
+        <h1>{{ post.title }}</h1>
+        <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on }}</h6>
+    </div>
+    <div>
+        <img src=" {{ post.featured_image.url }}">
+    </div>
+    <div>
+        <p>{{ post.content | safe }}</p>
+    </div>
 </div>
 <div class="container">
-    
-</div>
 
+</div>
 {%endblock%}
