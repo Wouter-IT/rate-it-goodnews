@@ -2,14 +2,15 @@
 
 {% block content %}
 <div class="container">
-    <div class="float-xl-end w-auto" id="element-ui"> 
+    <div class="float-xl-end w-auto" id="element-ui">
         <div>
             <button class="btn btn-lg btn-create-post mb-2 w-100"><strong>Create post</strong></button>
         </div>
         <div class="card shadow-lg" id="greeting-card">
             <div class="card-body">
                 <h5 class="card-title">Greetings!</h5>
-                <p class="card-text">Welcome to Rate-It Goodnews. <strong>THE</strong> place to find out what good things are going on in the world!</p>
+                <p class="card-text">Welcome to Rate-It Goodnews. <strong>THE</strong> place to find out what good
+                    things are going on in the world!</p>
             </div>
         </div>
     </div>
@@ -31,7 +32,45 @@
         <p>{{ post.content | safe }}</p>
     </div>
 </div>
-<div class="container">
 
+<!-- Repurposed from the walkthrough project "Codestar" -->
+<div class="container">
+    <i class="far fa-heart"></i> {{ post.number_of_post_likes }}
+    <span class="px-2">|</span>  
+    {% with comments.count as total_comments %}
+    <i class="fa-regular fa-comment"></i> {{ comments.count }}
+    {% endwith %}
+
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 card mb-4  mt-3 ">
+            <div class="card-body">
+                <h3 class="card-title">Comments:</h3>
+                {% for comment in comments %}
+                <div>
+                    <hr>
+                    <p>
+                        {{ comment.user }}
+                        <span class="text-muted">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-1">
+        </div>
+        <div class="col-md-5 card mb-4 mt-3">
+            <div class="card-body">
+                <!-- For later -->
+            </div>
+        </div>
+    </div>
 </div>
 {%endblock%}
