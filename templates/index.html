@@ -25,7 +25,7 @@
                 <div class="card-body">
                     <a href="{% url 'post_page' post.slug %}">
                         <h3 class="card-title"><strong>{{ post.title }}</strong></h3>
-                        <h6 class="gold-heading">Posted by {{ post.user }} {{ post.created_on|timesince }} ago</h6>
+                        <h6 class="gold">Posted by {{ post.user }} {{ post.created_on|timesince }} ago</h6>
                         {% if "placeholder" in post.featured_image.url %}
                         <!-- Remains empty -->
                         {% else %}
@@ -53,10 +53,10 @@
     <nav aria-label="Page navigation">
         <ul class="pagination mt-5 justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn-lg heading gold-heading">&laquo; PREV</a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link btn btn-lg heading gold">&laquo; PREV</a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn-lg heading gold-heading"> NEXT &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link btn btn-lg heading gold"> NEXT &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>

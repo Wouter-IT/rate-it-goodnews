@@ -19,7 +19,7 @@
 <div class="container mt-2">
     <div>
         <h1>{{ post.title }}</h1>
-        <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on|timesince }}</h6>
+        <h6 class="gold">User: {{ post.user }} | {{ post.created_on|timesince }}</h6>
     </div>
     <div>
         {% if "placeholder" in post.featured_image.url %}

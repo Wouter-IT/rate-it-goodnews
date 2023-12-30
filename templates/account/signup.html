@@ -1,32 +1,47 @@
 {% extends "base.html" %}
 {% load allauth i18n socialaccount %}
+
+
 {% block head_title %}
-    {% trans "Signup" %}
+
+{% trans "Signup" %}
 {% endblock head_title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
-    <p>
-        {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
-    </p>
-    {% url 'account_signup' as action_url %}
-    {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-        {% slot body %}
-            {% csrf_token %}
-            {% element fields form=form unlabeled=True %}
-            {% endelement %}
-            {% if redirect_field_value %}
-                <input type="hidden"
-                       name="{{ redirect_field_name }}"
-                       value="{{ redirect_field_value }}" />
-            {% endif %}
-        {% endslot %}
-        {% slot actions %}
-            {% element button tags="prominent,signup" type="submit" %}
+<!--  Code to align box to center from stackoverflow user ppollono: https://stackoverflow.com/questions/20142606/in-a-bootstrap-responsive-page-how-to-center-a-div -->
+<div class="container vh-100">
+    <div class="d-flex align-items-center justify-content-center h-75">
+        <div class="auth-box shadow p-4">
+            <div class="">
+                {% element h1 %}
                 {% trans "Sign Up" %}
             {% endelement %}
-        {% endslot %}
-    {% endelement %}
-    {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+            <hr>
+            <p>
+                {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}"><span class="in-text-link">sign in here!</span></a>{% endblocktrans %}
+            </p>
+            {% url 'account_signup' as action_url %}
+            {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+                {% slot body %}
+                    {% csrf_token %}
+                    {% element fields form=form unlabeled=True %}
+                    {% endelement %}
+                    {% if redirect_field_value %}
+                        <input type="hidden"
+                            name="{{ redirect_field_name }}"
+                            value="{{ redirect_field_value }}" />
+                    {% endif %}
+                {% endslot %}
+                {% slot actions %}
+                    {% element button tags="prominent,signup" type="submit" %}
+                        {% trans "Sign Up" %}
+                    {% endelement %}
+                {% endslot %}
+            {% endelement %}
+            {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
