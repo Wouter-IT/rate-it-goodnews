@@ -35,16 +35,32 @@ body {
 
 .card-body a {
     text-decoration: none;
-    color: #f3fcf0;
+    color: #f6fcf4;
+}
+
+.icon {
+    font-size: 120%;
+}
+
+.up-icon {
+    color: #53a653;
+}
+
+.down-icon {
+    color: #972424
+}
+
+.comment-icon {
+    color: #5995ED;
 }
 
 .btn-create-post {
     background-color: #D6AA39;
-    color: #f3fcf0;
+    color: #f6fcf4;
 }
 
 #greeting-card {
-    background-color: #f3fcf0;
+    background-color: #f6fcf4;
     color: #171916;
     border-color: #FFFFFF;
 }
@@ -78,7 +94,7 @@ body {
 
 .socials i {
     font-size: 170%;
-    color: #f3fcf0;
+    color: #f6fcf4;
 }
 
 @media screen and (max-width: 1200px) {

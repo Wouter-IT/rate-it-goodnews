@@ -35,11 +35,14 @@
 
 <!-- Repurposed from the walkthrough project "Codestar" -->
 <div class="container">
-    <i class="fa-regular fa-circle-up icon comment-icon"></i> {{ post.number_of_post_likes }}
-    <span class="px-2">|</span>  
-    {% with comments.count as total_comments %}
-    <i class="fa-regular fa-comment icon up-icon"></i> {{ comments.count }}
-    {% endwith %}
+    <div class="d-flex align-items-center">
+        <i class="fa-regular fa-circle-up icon up-icon me-2"></i> {{ post.number_of_post_likes }} <i class="fa-regular fa-circle-down icon down-icon ms-2"></i>
+        <span class="px-2">|</span>  
+        {% with comments.count as total_comments %}
+        <i class="fa-regular fa-comment icon comment-icon me-1"></i> {{ comments.count }}
+        {% endwith %}
+    </div>
+
     <hr>
     <div class="row mx-1">
         <div class="col-md-6 card mb-4  mt-3 ">
@@ -54,7 +57,7 @@
                             {{ comment.created_on|timesince }}
                         </span> wrote:
                         <div class="d-inline-block float-end">
-                            <i class="fa-regular fa-circle-up icon up-icon"></i> {{ comment.number_of_likes_comment }}
+                            <i class="fa-regular fa-circle-up icon up-icon me-1"></i> {{ comment.number_of_likes_comment }} <i class="fa-regular fa-circle-down icon down-icon ms-1"></i>
                         </div>
                     </p>
                     {{ comment.body | linebreaks }}
