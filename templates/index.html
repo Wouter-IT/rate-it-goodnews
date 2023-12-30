@@ -26,7 +26,11 @@
                     <a href="{% url 'post_page' post.slug %}">
                         <h3 class="card-title"><strong>{{ post.title }}</strong></h3>
                         <h6 class="gold-heading">User: {{ post.user }} | {{ post.created_on }}</h6>
+                        {% if "placeholder" in post.featured_image.url %}
+                        <!-- Remains empty -->
+                        {% else %}
                         <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                        {% endif %}
                         <p class="card-text pt-2">{{ post.excerpt }}</p>
                     </a>
                     <hr>
