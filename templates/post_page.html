@@ -58,6 +58,9 @@
                         <span class="text-muted">
                             {{ comment.created_on }}
                         </span> wrote:
+                        <div class="d-inline-block float-end">
+                            <i class="far fa-heart"></i> {{ comment.number_of_likes_comment }}
+                        </div>
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
