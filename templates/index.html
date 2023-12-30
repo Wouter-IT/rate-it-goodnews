@@ -34,9 +34,13 @@
                         <p class="card-text pt-2">{{ post.excerpt }}</p>
                     </a>
                     <hr>
-                    <i class="fa-regular fa-circle-up icon up-icon"></i> {{ post.number_of_post_likes }}
-                    <span class="px-2">|</span>   
-                    <i class="fa-regular fa-comment icon comment-icon"></i> {{ post.comments.count }}
+                    {% if post.number_of_likes < 0 %}
+                    <i class="fa-regular fa-circle-down icon down-icon"></i>
+                    {% else %}
+                    <i class="fa-regular fa-circle-up icon up-icon"></i> 
+                    {% endif %}
+                    {{ post.number_of_post_likes }} <span class="px-2">|</span>   
+                        <i class="fa-regular fa-comment icon comment-icon"></i> {{ post.comments.count }}
                 </div>
             </div>
         </div>
