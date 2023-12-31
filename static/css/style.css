@@ -110,6 +110,13 @@ body {
     box-shadow: none;
 }
 
+.forgot-pw-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #171916!important;
+    text-decoration: underline 2px #D6AA39;
+}
+
 #buffer {
     margin-bottom: 10vh;
 }
