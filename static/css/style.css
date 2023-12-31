@@ -24,6 +24,9 @@ body {
     border-color: #D6AA39;
 }
 
+#logo-heading {
+    font-size: 220%;
+}
 #element-ui {
     max-width: 25%;
     margin-left: 0.5vw;
